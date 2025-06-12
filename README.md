@@ -1,4 +1,3 @@
-# Challenges
 # Frontend Mentor Challenges
 
 This is a solution to the [Frontend Mentor](https://www.frontendmentor.io) challenge, built with HTML, CSS, JavaScript, and React.js. The goal was to practice responsive design, accessibility, and frontend development skills.
