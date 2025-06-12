@@ -1,0 +1,208 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Inconsolata-Normal;
+  src: url(./fonts/Inconsolata-VariableFont_wdth_wght.ttf);
+}
+@font-face {
+  font-family: Inconsolata-bold;
+  src: url(./fonts/static/Inconsolata-Bold.ttf);
+}
+@font-face {
+  font-family: Inconsolata-ExtraBold;
+  src: url(./fonts/static/Inconsolata-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Inconsolata-Medium;
+  src: url(./fonts/static/Inconsolata-Medium.ttf);
+}
+@font-face {
+  font-family: Inconsolata-Regular;
+  src: url(./fonts/static/Inconsolata-Regular.ttf);
+}
+:root {
+  /* Colors */
+  --Neutral-0: hsl(0, 0%, 100%);
+  --Neutral-300: hsl(252, 6%, 83%);
+  --Neutral-500: hsl(246, 15%, 58%);
+  --Neutral-700: hsla(245, 19%, 35%, 0.793);
+  --Neutral-900: hsl(248, 70%, 10%);
+  --Orange-500: hsl(7, 88%, 67%);
+  --Orange-700: hsl(7, 71%, 60%);
+  /* Fonts */
+  --font-normal: "Inconsolata-Normal";
+  --font-bold: "Inconsolata-Bold";
+  --font-extra-bold: "Inconsolata-ExtraBold";
+  --font-medium: "Inconsolata-Medium";
+  --font-regular: "Inconsolata-Regular";
+  /* Font-weight */
+  --font-400: 400;
+  --font-500: 500;
+  --font-700: 700;
+  --font-800: 800;
+}
+
+.my-gradient-text {
+  background-image: linear-gradient(
+    to right,
+    hsl(7, 86%, 67%),
+    hsl(0, 0%, 100%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body {
+  color: var(--Neutral-0);
+  font-size: 20px;
+  background-image: url(./images/background-desktop.png);
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/pattern-lines.svg);
+  /* z-index: 0; */
+  position: fixed;
+  inset: 0;
+}
+.top-logo {
+  width: 100%;
+  margin-top: 10px;
+  /* background-color: #ffffff5f; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.top-logo span {
+  font-family: var(--font-bold);
+  font-size: 25px;
+}
+.pattern-circle-1 {
+  position: absolute;
+  left: 60px;
+  top: -90px;
+  /* z-index: 0; */
+  /* background-color: aliceblue; */
+}
+.pattern-circle-2 {
+  position: absolute;
+  right: 200px;
+  top: 300px;
+  z-index: 0;
+}
+.squiggly-line-bottom {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.6;
+}
+.squiggly-line-top {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  /* z-index: 0; */
+}
+
+.main-heading {
+  width: 100%;
+  max-width: 40%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.main-heading h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: var(--font-bold);
+}
+.para-text {
+  text-align: center;
+  font-family: var(--font-medium);
+  color: var(--Neutral-500);
+  margin-top: 20px;
+}
+
+.my-form {
+  width: 100%;
+  max-width: 500px;
+  min-height: 550px;
+  /* background-color: rgba(240, 248, 255, 0.097); */
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 4;
+}
+.lable {
+  font-size: 16px;
+  font-family: var(--font-regular);
+  margin: 10px 0;
+  color: var(--Neutral-300);
+}
+.upload-file {
+  width: 100%;
+  min-height: 80px;
+  border: 1.5px dashed var(--Neutral-500);
+  border-radius: 8px;
+  background-color: var(--Neutral-900);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.small-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Neutral-700);
+}
+.upload-file span {
+  font-size: 14px;
+  font-family: var(--font-regular);
+  color: var(--Neutral-500);
+}
+.error-lable {
+  margin-top: 10px;
+  font-size: 12px;
+  font-family: var(--font-regular);
+  display: flex;
+  align-self: center;
+  justify-content: start;
+  gap: 5px;
+  color: var(--Neutral-500);
+}
+.input-container {
+  width: 100%;
+  height: 50px;
+  background-color: var(--Neutral-700);
+  border-radius: 8px;
+}
+.input-container input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+.submit-btn{
+    width: 100%;
+    min-height: 50px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 20px;
+    background-color: var(--Orange-700);
+    color: var(--Neutral-900);
+    font-size: 15px;
+    font-weight: var(--font-700);
+}

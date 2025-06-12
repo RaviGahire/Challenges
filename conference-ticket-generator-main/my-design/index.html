@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <title>Frontend Mentor | Conference ticket generator</title>
+</head>
+<body>
+    <main class="main">
+        <div class="top-logo"><img width="30px" src="./images/logo-mark.svg" alt="logo"> <span>Coding Conf</span></div>
+        <div class="pattern-circle-1"><img src="./images/pattern-circle.svg" alt="circle-1"></div>
+        <div class="pattern-circle-2"><img src="./images/pattern-circle.svg" alt="circle-2"></div>
+        <div class="squiggly-line-bottom"><img src="./images/pattern-squiggly-line-bottom-desktop.svg"
+                alt="squiggly-line-bottom"></div>
+        <div class="squiggly-line-top"><img src="./images/pattern-squiggly-line-top.svg" alt="squiggly-line-bottom">
+        </div>
+        <div class="main-heading">
+            <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        </div>
+        <p class="para-text">Secure your spot at next year's biggest coding conference.</p>
+        <form action="submit" class="my-form">
+            <p class="lable">Upload Avatar</p>
+            <div id="file" class="upload-file">
+                <div class="small-icon-box"><img src="./images/icon-upload.svg" alt="file-upload-icon"></div>
+                <span>Drag and drop or click to upload</span>
+            </div>
+            <div class="error-lable"><img src="./images/icon-info.svg" alt="">Upload your photo (JPG or PNG, max size:
+                500KB).</div>
+            <p class="lable">Full Name</p>
+            <div class="input-container"><input type="text" placeholder="Your Full Name"></div>
+            <p class="lable">Email Address</p>
+            <div class="input-container"><input type="text" placeholder="example@email.com"></div>
+            <p class="lable">GitHub Username</p>
+            <div class="input-container"><input type="text" placeholder="yourusername"></div>
+            <button class="submit-btn">Generate My Ticket</button>
+        </form>
+    </main>
+</body>
+</html>
