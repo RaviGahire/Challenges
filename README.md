@@ -1,21 +1,33 @@
 # Challenges
-This is a solution to the Frontend Mentor challenges Built with HTML, CSS, Javascript, and react js The goal was to practice responsive design, accessibility, and modern frontend development best practices.
-🛠 Tech Stack:
+# Frontend Mentor Challenges
 
-HTML5
+This is a solution to the [Frontend Mentor](https://www.frontendmentor.io) challenge, built with HTML, CSS, JavaScript, and React.js. The goal was to practice responsive design, accessibility, and frontend development skills.
 
-CSS3 / Tailwind / SCSS (choose what you used)
+## 🔧 Tech Stack
 
-JavaScript / React (if used)
+- HTML5  
+- CSS3 / Tailwind / Bootstrap 
+- JavaScript / React 
+- Responsive Design  
 
-Responsive Design
+## ✨ Features
 
-🚀 Features:
+- Fully responsive layout  
+- Mobile-first approach  
+- Clean and semantic HTML  
+- Accessible design  
 
-Fully responsive layout
+## 🚀 Live Site
 
-Mobile-first approach
+[Click here to view the live site](#) 
 
-Clean and semantic code
+## 📷 Screenshot
 
-Accessible design
+![Project Screenshot](./screenshot.jpg) 
+
+
+## 💬 Acknowledgements
+
+Challenge by [Frontend Mentor](https://www.frontendmentor.io).  
+Coded by [Ravi Gahire](https://github.com/yourusername).
+
