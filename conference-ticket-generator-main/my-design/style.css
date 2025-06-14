@@ -109,20 +109,20 @@ body {
 }
 
 .main-heading {
-  width: 100%;
+  width: 40%;
   margin: 0 auto;
-  margin-top: 50px;
 }
 .main-heading h1 {
   font-size: 2.5rem;
   text-align: center;
   font-family: var(--font-bold);
+  margin-block: 32px;
 }
 .para-text {
   text-align: center;
   font-family: var(--font-medium);
   color: var(--Neutral-500);
-  margin-top: 20px;
+  margin-block: 20px;
 }
 
 .my-form {
@@ -133,15 +133,16 @@ body {
   padding: 0 20px;
   z-index: 9;
 }
+
 .lable {
   font-size: 16px;
   font-family: var(--font-regular);
-  margin: 10px 0;
+  margin-bottom: 10px;
   color: var(--Neutral-300);
 }
 .upload-file {
   width: 100%;
-  min-height: 80px;
+  min-height: 90px;
   border: 1.5px dashed var(--Neutral-500);
   border-radius: 8px;
   background-color: var(--Neautral-transprent);
@@ -168,19 +169,22 @@ body {
 }
 .error-lable {
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 14px;
   font-family: var(--font-regular);
   display: flex;
   align-self: center;
   justify-content: start;
   gap: 5px;
   color: var(--Neutral-500);
+  margin-bottom: 18px;
+  font-weight: 500;
 }
 .input-container {
   width: 100%;
   height: 50px;
   background-color: var(--Neautral-transprent);
   border-radius: 8px;
+  margin-bottom: 32px;
 }
 .input-container input {
   width: 100%;
@@ -213,18 +217,20 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  .main-heading {
+    width: 100%;
+  }
+  .main-heading h1 {
+    font-size: 1.5rem;
+    margin-block: 16px;
   }
   .pattern-circle-1,
   .pattern-circle-2,
   .squiggly-line-bottom,
   .squiggly-line-top {
     display: none;
-  }
-  .main-heading {
-    max-width: 600px;
-  }
-  .main-heading h1 {
-    font-size: 2rem;
   }
 }
 
@@ -234,6 +240,7 @@ body {
     background-position: initial;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh;
   }
   .squiggly-line-bottom,
   .squiggly-line-top {
