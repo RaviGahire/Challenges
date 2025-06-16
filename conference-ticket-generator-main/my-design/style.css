@@ -152,7 +152,13 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  transition: border 100ms ease-in;
 }
+
+.upload-file:hover {
+  border: 1.5px dashed var(--Orange-700);
+}
+
 .small-icon-box {
   width: 40px;
   height: 40px;
@@ -161,6 +167,11 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--Neutral-700);
+  transition: background-color 200ms ease-in-out;
+}
+.small-icon-box:hover {
+  background-color: var(--Neautral-transprent);
+  cursor: pointer;
 }
 .upload-file span {
   font-size: 14px;
@@ -182,7 +193,7 @@ body {
 .input-container {
   width: 100%;
   height: 50px;
-  background-color: var(--Neautral-transprent);
+  /* background-color: var(--Neautral-transprent); */
   border-radius: 8px;
   margin-bottom: 32px;
 }
@@ -197,6 +208,23 @@ body {
   color: var(--Neutral-0);
   font-size: var(--font-400);
   font-size: 15px;
+  transition-property: border, background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.28, 0.76, 0.79, 0.51);
+}
+
+.input-container input:hover {
+  background-color: var(--Neutral-900);
+  border: 1px solid var(--Neutral-0);
+}
+::placeholder {
+  color: var(--Neutral-300);
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+input:focus {
+  border: 1px solid;
 }
 
 .submit-btn {
@@ -206,12 +234,16 @@ body {
   border: none;
   margin-top: 20px;
   background-color: var(--Orange-700);
-  color: var(--Neutral-900);
   font-size: 15px;
   font-weight: var(--font-700);
 }
-/* Ticket Css */
 
+.submit-btn a {
+  text-decoration: none;
+  color: var(--Neutral-900);
+}
+
+/* Ticket Css */
 .ticket-heading {
   width: 40%;
   margin: auto;
