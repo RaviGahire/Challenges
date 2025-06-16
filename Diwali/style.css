@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Salsa&family=Style+Script&display=swap");
+/*  font-family: "Style Script", cursive; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Salsa", cursive;
+}
+.top-img {
+  width: 220px;
+  margin-bottom: -180px;
+}
+.hero-section {
+  background-color: #f99501;
+  background-image: url(./Assets/images/orange-backdrop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.paraghrap-and-audio {
+  margin-left: 15rem;
+}
+.paraghrap-and-audio p {
+  font-size: 46px;
+  font-weight: 500;
+  max-width: 550px;
+}
+.paraghrap-and-audio audio::-webkit-media-controls-panel {
+  background-color: #fbd8a4;
+}
+
+.audio-container {
+  margin-block: 25px;
+  background-color: #fbd8a4;
+  max-width: max-content;
+  border-radius: 45px;
+  display: flex;
+  padding: 0 18px;
+  align-items: center;
+  justify-content: center;
+}
+.horizontal-divider {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-inline: auto;
+}
+.horizontal-line {
+  width: 100%;
+  max-width: 468px;
+  height: 4px;
+  background-color: #fbd8a4;
+  margin-block: 20px;
+  border-radius: 10px;
+}
+.circle {
+  background-color: #fbd8a4;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+
+.section-gods-image {
+  background-color: #f99501;
+  padding-inline: 1rem;
+}
+.images-of-god {
+  max-width: 900px;
+  width: 100%;
+  display: block;
+  margin-inline: auto;
+}
+
+.section-gods-image h2 {
+  font-family: "Style Script", cursive;
+  text-align: center;
+  margin-block: 20px;
+  letter-spacing: 3px;
+  font-size: 32px;
+  font-weight: 500;
+}
+.white-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.white-card {
+  max-width: 500px;
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 20px;
+}
+
+.para-1,
+.para-2 {
+  font-size: 2rem;
+}
+
+.little-girl {
+  max-width: 260px;
+  margin-left: -88px;
+}
+
+.lakshmi-ganesha-card {
+  display: flex;
+  padding: 4rem;
+  max-width: 900px;
+  border-radius: 10px;
+  margin: auto;
+  background: linear-gradient(45deg, red, yellow, lime, aqua, blue, magenta);
+  animation: discoLight 3s linear infinite;
+  background-size: 400% 400%;
+}
+@keyframes discoLight {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.lakshmi-ganesha-card img {
+  width: 50%;
+}
+.footer {
+  max-width: 900px;
+  margin-inline: auto;
+}
+.footer p {
+  margin: 10px 0;
+  padding-bottom: 2rem;
+}
+.footer h2 {
+  text-align: left;
+  margin: 0;
+}
+.my-name {
+  text-align: center;
+  padding-block: 10px;
+}
+
+/* ===================================== */
+
+@media (max-width: 840px) {
+  .top-img {
+    margin-bottom: 0;
+  }
+  .paraghrap-and-audio {
+    margin-left: 1rem;
+  }
+  .paraghrap-and-audio p {
+    font-size: 35px;
+  }
+  .music-title,
+  .music-wave,
+  .second-deepak {
+    display: none;
+  }
+  .audio-container {
+    margin-inline-end: 1rem;
+  }
+  .first-deepak {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 540px) {
+  .first-deepak {
+    width: 100%;
+    max-width: 300px;
+  }
+  .section-gods-image h2 {
+    font-size: 20px;
+  }
+  .white-card {
+    padding: 1.2rem;
+    max-width: 600px;
+  }
+  .para-1,
+  .para-2 {
+    font-size: 1rem;
+  }
+  .little-girl {
+    max-width: 160px;
+    margin-left: -30px;
+  }
+}
