@@ -311,6 +311,7 @@ body {
   font-family: var(--font-regular);
   font-weight: var(--font-500);
   transform: rotate(90deg);
+  color: var(--Neutral-500);
 }
 
 /* ======================================================================================== */
@@ -350,6 +351,35 @@ body {
   .text p {
     padding: 10px;
   }
+
+  .full-logo {
+    max-width: 80%;
+  }
+  .time-and-date {
+    display: block;
+  }
+  .person-avatar-and-name .avatar {
+    max-width: 40px;
+    min-height: 40px;
+    align-self: flex-end;
+  }
+  .person-full-name {
+    max-width: fit-content;
+  }
+  .person {
+    font-size: 1.2rem;
+    margin: 0;
+    align-items: end;
+  }
+  .github {
+    margin: 0;
+  }
+  .github img {
+    width: 18px;
+  }
+  .github-username {
+    font-size: 0.799rem;
+  }
 }
 
 @media (max-width: 992px) {
@@ -360,9 +390,27 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
   }
+  .ticket-heading {
+    width: 70%;
+  }
+  .text {
+    max-width: 50%;
+  }
+
+  /* .pattern-circle-1,
+  .pattern-circle-2, */
   .squiggly-line-bottom,
   .squiggly-line-top {
     display: none;
+  }
+
+  /* ticket */
+  .full-logo {
+    max-width: 100%;
+  }
+
+  .person-full-name {
+    max-width: fit-content;
   }
 }
 
