@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Cyan-second: hsla(179, 62%, 43%, 0.63);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+body {
+  background-color: var(--Light-Gray);
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.attribution {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.price-container {
+  margin-block: 5rem;
+  margin-inline: 1rem;
+  display: grid;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card {
+  min-height: 200px;
+
+  padding: 1rem;
+}
+.card-1 {
+  background-color: var(--Light-Gray);
+}
+.card-1 h1 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: var(--Cyan);
+}
+.card-1 h2 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: var(--Bright-Yellow);
+}
+.card-1 p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: var(--Grayish-Blue);
+  margin-block: 1.5rem;
+  line-height: 2;
+}
+.card-2 {
+  background-color: var(--Cyan);
+}
+.card-2 h2 {
+  font-size: 18px;
+  color: var(--Light-Gray);
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.card-2 p {
+  font-size: 16px;
+  color: var(--Light-Gray);
+  font-weight: 400;
+}
+.price {
+  display: flex;
+  align-items: start;
+  gap: 0.555rem;
+  margin-block: 1rem;
+}
+.price > span:nth-child(1) {
+  font-size: 2rem;
+  color: var(--Light-Gray);
+  font-weight: 700;
+}
+.price > span:nth-child(2) {
+  align-self: center;
+  color: var(--Light-Gray);
+  font-weight: 300;
+}
+
+.card-2 button {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--Bright-Yellow);
+  color: var(--Light-Gray);
+  padding: 1rem;
+  margin-block: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card-3 {
+  background-color: var(--Cyan-second);
+}
+
+.card-3 h2 {
+  font-size: 18px;
+  color: var(--Light-Gray);
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.card-3 p {
+  margin-block: 2rem;
+  font-size: 16px;
+  color: var(--Light-Gray);
+  font-weight: 300;
+  margin-inline-end: 7rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+  .price-container {
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    margin: auto;
+  }
+  .card-1 {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+}
