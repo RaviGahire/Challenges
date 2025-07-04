@@ -44,7 +44,7 @@ body {
   padding: 24px;
 }
 
-.products-container {
+.countries-container {
   max-width: 1200px;
   margin-inline: auto;
   display: flex;
@@ -57,7 +57,7 @@ a {
   color: inherit;
 }
 
-.product-card {
+.country-card {
   display: inline-block;
   max-width: 250px;
   border-radius: 4px;
@@ -68,12 +68,12 @@ a {
   transition: transform 200ms ease-in-out;
 }
 
-.product-card:hover {
+.country-card:hover {
   transform: scale(1.03);
   cursor: pointer;
 }
 
-.product-card img {
+.country-card img {
   width: 100%;
   background-color: var(--Grey-950);
 }
@@ -81,8 +81,9 @@ a {
   padding-inline: 16px;
 }
 .card-text h3 {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--Blue-950);
+  margin-bottom: 8px;
 }
 .card-text p + p {
   margin-block: 8px;

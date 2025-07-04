@@ -1,25 +1,22 @@
-fetch('https://dummyjson.com/products')
-.then(res => res.json())
-.then((data)=>{
- data.products.map((product)=>{
-console.log(product.images)
-const productContainer = document.querySelector('.products-container')
-const productCard = document.createElement('a');
-productCard.classList.add("product-card");
-const cardHtml = `<img src="${product.thumbnail}" alt="flag">
-              <div class="card-text">
-                  <h3>${product.title}</h3> 
-                 <p>${product.description}</p>
-                <p><b>Region: </b>Europe</p>
-                <p><b>Capital: </b>Berlin</p>
-                  </div>`;
- productCard.innerHTML = cardHtml
+countryContainer = document.querySelector('.countries-container')
 
- productContainer.append(productCard)
-
-
-
- })
-});
-
-
+fetch("./data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((country) => {
+      const countryCards= document.createElement('a')
+      countryCards.href = `/country.html?name=${country.name}`
+      countryCards.classList.add('country-card')
+      countryCards.innerHTML = `
+                      <img src="${country.flags.svg}" alt="flag">
+                <div class="card-text">
+                    <h3 class="card-title">${country.name}</h3>
+                    <p><b>Population: </b>${country.population.toLocaleString('en-IN')}</p>
+                    <p><b>Region: </b>${country.region}</p>
+                    <p><b>Capital: </b>${country.capital || 'Capital Less'}</p>
+                   
+                </div>
+               `
+               countryContainer.append(countryCards)
+    });
+  });
