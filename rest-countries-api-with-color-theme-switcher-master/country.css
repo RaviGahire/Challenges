@@ -33,19 +33,26 @@ margin-bottom: 32px;
   max-height: 150px;
 }
 
+.details-text p span{
+  margin-left: 5px;
+}
+
 .border-countrise {
   margin-top: 48px;
+    
 }
 .border-countrise .border-anchor {
   display: inline-block;
   padding: 5px 24px;
-  margin-inline: 12px;
+  margin-inline: 8px;
   border-radius: 5px;
   cursor: pointer;
+  margin-block: 8px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: transform 100ms ease, background-color 200ms ease,
     color 100ms ease-in;
+
 }
 .border-countrise .border-anchor:hover {
   transform: scale(1.05);
@@ -61,14 +68,24 @@ margin-bottom: 32px;
     gap: 32px;
   }
   .details-text {
+    min-height: 200px;
     display: block;
     max-width: unset;
   }
   .details-text p {
     margin: initial;
+    margin-block: 8px;
   }
-  .country-details img {
+    .country-details img {
     width: 100%;
     max-width: 400px;
   }
+.border-countrise{
+  width: 100%;
+}
+.border-country-links{
+  min-height: 100px;
+}
+
+
 }
