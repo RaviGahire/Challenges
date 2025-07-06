@@ -10,6 +10,7 @@ const domain = document.querySelector(".domain");
 const currencies = document.querySelector(".currencies");
 const languages = document.querySelector(".languages");
 const BorderLinks = document.querySelector(".border-country-links");
+const backBtn = document.querySelector('.back-btn')
 
 // console.log(countryName);
 
@@ -45,7 +46,7 @@ fetch("./data.json")
         // console.log(borderCountry ? borderCountry.name : code);
         let countryBor = document.createElement("a");
         countryBor.classList.add("border-anchor");
-        // countryBor.href =
+         countryBor.href =  `/country.html?name=${borderCountry.name}`
         countryBor.innerText = borderCountry ? borderCountry.name : code;
         BorderLinks.append(countryBor);
       });
