@@ -36,7 +36,7 @@ margin-bottom: 32px;
 .border-countrise {
   margin-top: 48px;
 }
-.border-countrise a {
+.border-countrise .border-anchor {
   display: inline-block;
   padding: 5px 24px;
   margin-inline: 12px;
@@ -47,7 +47,7 @@ margin-bottom: 32px;
   transition: transform 100ms ease, background-color 200ms ease,
     color 100ms ease-in;
 }
-.border-countrise a:hover {
+.border-countrise .border-anchor:hover {
   transform: scale(1.05);
   background-color: var(--Blue-950);
   color: #fff;

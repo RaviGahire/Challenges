@@ -9,7 +9,7 @@ const conCapital = document.querySelector(".con-capital");
 const domain = document.querySelector(".domain");
 const currencies = document.querySelector(".currencies");
 const languages = document.querySelector(".languages");
-
+const BorderLinks = document.querySelector(".border-country-links");
 
 // console.log(countryName);
 
@@ -32,13 +32,23 @@ fetch("./data.json")
     }
     population.innerText = country.population;
     region.innerText = country.region;
-    subRegion.innerText = country.subregion || 'No Sub-Region';
-    conCapital.innerText = country.capital || 'Capital Less';
-    domain.innerText = country.topLevelDomain.join(', ') || '.com';
-    currencies.innerText = country.currencies[0].code || 'No Currencies ';
-    languages.innerText = country.languages[0].name || 'No languages' ;
+    subRegion.innerText = country.subregion || "No Sub-Region";
+    conCapital.innerText = country.capital || "Capital Less";
+    domain.innerText = country.topLevelDomain.join(", ") || ".com";
+    currencies.innerText = country.currencies[0].code || "No Currencies ";
+    languages.innerText = country.languages[0].name || "No language";
 
-console.log(country.currencies)
-
+    //Here we find the border country using alphacode === code
+    if (country.borders) {
+      country.borders.forEach((code) => {
+        const borderCountry = data.find((c) => c.alpha3Code === code);
+        // console.log(borderCountry ? borderCountry.name : code);
+        let countryBor = document.createElement("a");
+        countryBor.classList.add("border-anchor");
+        // countryBor.href =
+        countryBor.innerText = borderCountry ? borderCountry.name : code;
+        BorderLinks.append(countryBor);
+      });
+    }
   })
   .catch(console.error);
