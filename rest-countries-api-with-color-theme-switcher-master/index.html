@@ -11,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./main.js" defer></script>
 </head>
+
 <body>
     <header class="header">
         <div class="header-content">
@@ -19,9 +20,24 @@
         </div>
     </header>
     <main class="main-container">
+        <div class="search-filter-container">
+            <div class="search-container"><i class="fa-solid fa-magnifying-glass"></i><input type="text"
+                    placeholder="Search for a country "></div>
+
+            <select class="filter-bar">
+                <option hidden>Filter by region</option>
+                <option value="Africa">Africa</option>
+                <option value="America">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+
+        </div>
         <div class="countries-container">
-           
+
         </div>
     </main>
 </body>
+
 </html>
