@@ -31,7 +31,7 @@ fetch("./data.json")
     } else {
       NativeName.innerText = country.name;
     }
-    population.innerText = country.population;
+    population.innerText = country.population.toLocaleString("en-IN");
     region.innerText = country.region;
     subRegion.innerText = country.subregion || "No Sub-Region";
     conCapital.innerText = country.capital || "Capital Less";
