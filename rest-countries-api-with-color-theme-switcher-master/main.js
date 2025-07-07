@@ -1,6 +1,19 @@
 const countryContainer = document.querySelector(".countries-container");
 const filterBar = document.querySelector(".filter-bar");
 
+const searchInput = document.querySelector('.search-input')
+
+let allCountriesData 
+
+fetch("./data.json")
+  .then((res) => res.json())
+  .then((data)=>{
+    renderCountrise(data)
+    allCountriesData = data})
+    .catch(console.error);
+    
+
+
 fetch("./data.json")
   .then((res) => res.json())
   .then(renderCountrise);
@@ -33,6 +46,24 @@ filterBar.addEventListener("change", () => {
       });
     });
 });
+
+
+searchInput.addEventListener('input',(e)=>{
+const searchValue = e.target.value
+ const filteredData = allCountriesData.filter(
+    country => country.name.toLowerCase().includes(searchValue)
+  );
+
+renderCountrise(filteredData)
+
+})
+
+
+
+
+// toLowerCase().includes(e.target.value)
+
+
 
 function renderCountrise(data) {
   countryContainer.innerHTML = "";
