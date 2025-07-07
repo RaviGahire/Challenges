@@ -5,6 +5,7 @@ const searchInput = document.querySelector('.search-input')
 
 let allCountriesData 
 
+// on input search
 fetch("./data.json")
   .then((res) => res.json())
   .then((data)=>{
@@ -12,12 +13,12 @@ fetch("./data.json")
     allCountriesData = data})
     .catch(console.error);
     
-
-
+// by-default-render
 fetch("./data.json")
   .then((res) => res.json())
   .then(renderCountrise);
 
+  
 filterBar.addEventListener("change", () => {
   fetch("./data.json")
     .then((res) => res.json())
@@ -60,11 +61,7 @@ renderCountrise(filteredData)
 
 
 
-
-// toLowerCase().includes(e.target.value)
-
-
-
+// 
 function renderCountrise(data) {
   countryContainer.innerHTML = "";
   data.forEach((country) => {
@@ -85,4 +82,11 @@ function renderCountrise(data) {
                `;
     countryContainer.append(countryCards);
   });
+}
+
+
+
+function theme (){
+ document.body.classList.toggle('dark')
+
 }
