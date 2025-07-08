@@ -1,8 +1,15 @@
 .back-btn {
   padding: 6px 24px;
+  border-radius: 8px;
+  background-color: var(--Element-color);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+
+.back-btn:hover{
+  cursor: pointer;
+}
+
 .back-button-container {
   display: flex;
   max-width: 1200px;
@@ -50,15 +57,16 @@
   border-radius: 5px;
   cursor: pointer;
   margin-block: 8px;
+  background-color: var(--Element-color);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: transform 100ms ease, background-color 200ms ease,
     color 100ms ease-in;
 }
 .border-countrise .border-anchor:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   background-color: var(--Blue-950);
-  color: #fff;
+
 }
 
 @media (max-width: 840px) {

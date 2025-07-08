@@ -53,3 +53,25 @@ fetch("./data.json")
     }
   })
   .catch(console.error);
+
+  const themeIcon = document.querySelector('.theme')
+const body = document.querySelector('body')
+
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+  themeIcon.innerHTML = `<i class="fa-regular fa-moon"></i> Dark`;
+} else {
+  themeIcon.innerHTML = `<i class="fa-regular fa-sun"></i> Light`;
+}
+
+themeIcon.addEventListener("click", () => {
+  body.classList.toggle("dark");
+
+  if (body.classList.contains("dark")) {
+    themeIcon.innerHTML = `<i class="fa-regular fa-moon"></i> Dark`;
+    localStorage.setItem("theme", "dark");
+  } else {
+    themeIcon.innerHTML = `<i class="fa-regular fa-sun"></i> Light`;
+    localStorage.setItem("theme", "light");
+  }
+});
