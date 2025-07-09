@@ -52,8 +52,9 @@ filterBar.addEventListener("change", () => {
 searchInput.addEventListener('input',(e)=>{
 const searchValue = e.target.value
  const filteredData = allCountriesData.filter(
-    country => country.name.toLowerCase().includes(searchValue)
+    country => country.name.toLowerCase().includes(searchValue.toLowerCase())
   );
+  console.log(filteredData)
 
 renderCountrise(filteredData)
 
