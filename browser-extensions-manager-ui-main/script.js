@@ -1,7 +1,17 @@
 
-
 const extensionsList = document.querySelector('.extensions-list')
 // console.log(extensionsList)
+const theme = document.querySelector('.header_theme img')
+
+
+
+
+
+
+
+
+
+
 
 fetch('./data.json')
     .then(res => res.json())
@@ -31,9 +41,6 @@ data.forEach(exData => {
             </label>
               </div>`
     extensionsList.append(newElement)
-
-
-
 
 });
 }
