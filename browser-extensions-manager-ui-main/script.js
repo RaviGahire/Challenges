@@ -1,26 +1,29 @@
 
 const extensionsList = document.querySelector('.extensions-list')
-// console.log(extensionsList)
-const theme = document.querySelector('.header_theme img')
+const body = document.querySelector('body');
+const darkTheme = document.querySelector('.header_theme')
+const Icon = document.querySelector('.header_theme img')
+
+darkTheme.addEventListener('click', (e) => {
+  body.classList.toggle('dark-theme')
+  if (body.classList.contains('dark-theme')) {
+
+    Icon.src = './assets/images/icon-sun.svg'
+  } else {
+    Icon.src = './assets/images/icon-moon.svg'
+  }
 
 
-
-
-
-
-
-
-
-
+})
 
 fetch('./data.json')
-    .then(res => res.json())
-    .then((data) => {
-        cards(data)
-    })
+  .then(res => res.json())
+  .then((data) => {
+    cards(data)
+  })
 
 function cards(data) {
-data.forEach(exData => {
+  data.forEach(exData => {
     let newElement = document.createElement('div')
     newElement.classList.add('extension-card')
     newElement.innerHTML = `
@@ -42,5 +45,5 @@ data.forEach(exData => {
               </div>`
     extensionsList.append(newElement)
 
-});
+  });
 }

@@ -30,6 +30,7 @@
   --font-600: 700;
 }
 
+/* Dark theme styles */
 .dark-theme {
   background: var(--dark-gradient);
   color: var(--color-very-light-blue);
@@ -38,9 +39,7 @@
 .dark-theme .header {
   background: var(--color-blue-gray);
 }
-.dark-theme .header_theme {
-  background: var(--light-gradient);
-}
+
 
 .dark-theme .extension-card {
   background: var(--color-dark-blue-gray);
@@ -68,8 +67,8 @@ body {
   font-family: var(--font-inter);
   font-weight: var(--font-400);
   font-size: 16px;
-  min-height: 95vh;
-  color: black;
+  min-height: 100vh;
+  color: var(--color-blue-gray);
   background: var(--color-very-light-blue);
 }
 .header {
@@ -92,6 +91,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background: transparent;
 }
 .header_theme img {
   width: 20px;
