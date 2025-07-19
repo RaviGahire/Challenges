@@ -23,7 +23,7 @@ darkTheme.addEventListener('click', (e) => {
 
 fetch('./data.json')
   .then(res => res.json())
-  .then((data) => { cards(data); IsActiveTab(data) })
+  .then((data) => { cards(data); IsActiveTab(data); inactiveTab(data) })
 
 function cards(data) {
   data.forEach(exData => {
@@ -77,20 +77,67 @@ function cards(data) {
 // Active Tab only 
 const checkbox = document.querySelectorAll('check-btn');
 function IsActiveTab(data) {
-
-
-
-  
-  data.forEach((activeData) => {
-    if (activeData.isActive === true) {
-      console.log(activeData.isActive)
-    }
-
-
-
+  const activeEx = document.querySelector('.active-ex')
+  activeEx.addEventListener('click', (e) => {
+    // console.log('Active Tab Clicked')
+    extensionsList.innerHTML = '' // Clear the list
+    data.forEach(activeData => {
+      if (activeData.isActive === true) {
+        let newElement = document.createElement('div')
+        newElement.classList.add('extension-card')
+        newElement.innerHTML = `
+          <div class="extension-card__header">
+            <div class="extension-logo">
+              <img src="${activeData.logo}" alt="Extension-Icon">
+            </div>
+            <div class="extension-details">
+              <h2>${activeData.name}</h2>
+              <p>${activeData.description}</p>
+            </div>
+          </div>
+          <div class="extension-footer">
+            <button class="remove-btn">Remove</button>
+            <label class="switch">
+              <input id='check-btn' type="checkbox" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>`
+        extensionsList.append(newElement)
+      }
+    })
   })
+}
 
 
-
-
+// Inactive Tab only
+function inactiveTab(data) {
+  const inactiveEx = document.querySelector('.inactive-ex')
+  inactiveEx.addEventListener('click', (e) => {
+ 
+    extensionsList.innerHTML = ''
+    data.forEach(inactiveData => {
+      if (inactiveData.isActive === false) {
+        let newElement = document.createElement('div')
+        newElement.classList.add('extension-card')
+        newElement.innerHTML = `
+          <div class="extension-card__header">
+            <div class="extension-logo">
+              <img src="${inactiveData.logo}" alt="Extension-Icon">
+            </div>
+            <div class="extension-details">
+              <h2>${inactiveData.name}</h2>
+              <p>${inactiveData.description}</p>
+            </div>
+          </div>
+          <div class="extension-footer">
+            <button class="remove-btn">Remove</button>
+            <label class="switch">
+              <input id='check-btn' type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>`
+        extensionsList.append(newElement)
+      }
+    })
+  })
 }
