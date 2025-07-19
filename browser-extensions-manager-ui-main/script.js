@@ -49,12 +49,8 @@ function cards(data) {
               </div>`
     extensionsList.append(newElement)
 
-
-
-
-
   });
-  // let isActive = null;
+  
   const allEx = document.querySelector('.all-ex')
   // Initially show all extensions Tab
   document.querySelectorAll('.extension-card').forEach(card => {
@@ -113,7 +109,7 @@ function IsActiveTab(data) {
 function inactiveTab(data) {
   const inactiveEx = document.querySelector('.inactive-ex')
   inactiveEx.addEventListener('click', (e) => {
- 
+
     extensionsList.innerHTML = ''
     data.forEach(inactiveData => {
       if (inactiveData.isActive === false) {
@@ -137,7 +133,16 @@ function inactiveTab(data) {
             </label>
           </div>`
         extensionsList.append(newElement)
+     
+        
       }
+      const removeBtns = document.querySelectorAll('.remove-btn')
+      removeBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.target.closest('.extension-card').remove()
+        })
+      })
+     
     })
   })
 }
