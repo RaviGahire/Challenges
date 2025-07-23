@@ -8,6 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
 
   <title>Frontend Mentor | Contact form</title>
 
@@ -25,51 +26,70 @@
 </head>
 
 <body>
-
+  <div class="toast-container">
+    <div class="toast">
+      <h4><img width="14px" src="./assets/images/icon-success-check.svg" alt=""> Message Sent!</h4>
+      <hr>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  </div>
   <div class="container">
-    <form action="sumbmit">
+    <form>
       <h1 class="form-title">Contact Us</h1>
       <div class="form-row">
         <div class="form-group">
-          <label for="name-lable">First Name <span>*</span></label>
-          <input type="text" class="form-control" id="name-lable" placeholder="First Name">
+          <label for="name-lable">First Name<span class="star">*</span></label>
+          <input type="text" class="form-control" id="first-name">
+          <span class="error-label">This field is required</span>
         </div>
         <div class="form-group">
-          <label for="last-name-lable">Last Name<span>*</span></label>
-          <input type="text" class="form-control" id="name-lable" placeholder="Last Name">
+          <label for="last-name-lable">Last Name<span class="star">*</span></label>
+          <input type="text" class="form-control" id="last-name">
+          <span class="error-label">This field is required</span>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group full-width">
-          <label for="email-lable">Email Address<span>*</span></label>
-          <input type="text" class="form-control" id="email-lable" placeholder="Email Address">
+          <label for="email-lable">Email Address<span class="star">*</span></label>
+          <input type="text" class="form-control" id="email-lable">
+          <span class="error-label">Please enter a valid email address</span>
         </div>
       </div>
       <div class="title">
-        <p>Query Types <span>*</span></p>
+        <p>Query Types<span class="star">*</span></p>
       </div>
       <div class="form-row">
         <div class="form-group">
           <div class="query-group">
-            <input type="radio">&nbsp;
-            <label for="radio">General Enquiry</label>
+            <input type="radio" checked>&nbsp;
+            <label for="radio">&nbsp;&nbsp;General Enquiry</label>
           </div>
         </div>
         <div class="form-group">
           <div class="query-group">
             <input type="radio">&nbsp;
-            <label for="radio">Support Request</label>
+            <label for="radio">&nbsp;&nbsp;Support Request</label>
           </div>
         </div>
+        
       </div>
       <div class="form-row">
         <div class="form-group full-width">
-          <label for="message">Message <span>*</span></label>
+          <label for="message">Message<span class="star">*</span></label>
           <textarea name="message" id="message"></textarea>
+                <span class="error-label">This field is required</span>
         </div>
       </div>
       <div class="form-row">
-        <input type="checkbox"><label for="checkbox">I consent to being contacted by the team <span>*</span></label>
+       <div>
+         <div class="checkbox">
+          <label for="checkbox"><input type="checkbox">&nbsp;&nbsp; I consent to being contacted by the team<span
+              class="star">*</span></label>
+              
+        </div>
+         <span class="error-label">To submit this form. please consent to being contacted</span>
+       </div>
+        
       </div>
       <div class="form-row">
         <button class="submit-btn"> Submit</button>
@@ -114,11 +134,11 @@
 
   Message Sent!
   Thanks for completing the form. We'll be in touch soon! -->
-
+  <!-- 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 
 </html>
