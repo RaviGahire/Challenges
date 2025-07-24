@@ -122,6 +122,39 @@ textarea:focus {
 .query-group:focus {
   border: 1px solid var(--Green-600-medium);
 }
+.query-group > input[type="radio"] {
+  appearance: none;
+  transform: scale(0.6);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  background: url(./assets/images/icon-radio-selected.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* checkbox  */
+.checkbox > label > input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid var(--Green-600-medium);
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.checkbox > label > input[type="checkbox"]:checked {
+  background-image: url("./assets/images/icon-checkbox-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-color: var(--Green-600-medium);
+}
 
 .title {
   margin-bottom: 0.333rem;
@@ -183,4 +216,3 @@ textarea:focus {
   color: var(--Red);
   font-size: 14px;
 }
-
