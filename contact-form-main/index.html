@@ -34,25 +34,25 @@
     </div>
   </div>
   <div class="container">
-    <form>
+    <form class="contact-form"  name="myForm">
       <h1 class="form-title">Contact Us</h1>
       <div class="form-row">
         <div class="form-group">
           <label for="name-lable">First Name<span class="star">*</span></label>
-          <input type="text" class="form-control" id="first-name">
-          <span class="error-label">This field is required</span>
+          <input type="text" id="first-name" >
+          <span class="error-label"></span>
         </div>
         <div class="form-group">
           <label for="last-name-lable">Last Name<span class="star">*</span></label>
-          <input type="text" class="form-control" id="last-name">
-          <span class="error-label">This field is required</span>
+          <input type="text" id="last-name" >
+          <span class="error-label"></span>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group full-width">
           <label for="email-lable">Email Address<span class="star">*</span></label>
-          <input type="text" class="form-control" id="email-lable">
-          <span class="error-label">Please enter a valid email address</span>
+          <input type="email" id="email" >
+          <span class="error-label"></span>
         </div>
       </div>
       <div class="title">
@@ -61,38 +61,36 @@
       <div class="form-row">
         <div class="form-group">
           <div class="query-group">
-            <input type="radio" >&nbsp;
+            <input type="radio" id="general"  >&nbsp;
             <label for="radio">&nbsp;&nbsp;General Enquiry</label>
           </div>
         </div>
         <div class="form-group">
           <div class="query-group">
-            <input type="radio">&nbsp;
+            <input type="radio" id="support" >&nbsp;
             <label for="radio">&nbsp;&nbsp;Support Request</label>
           </div>
         </div>
-        
+         <span class="error-label"></span>
       </div>
       <div class="form-row">
         <div class="form-group full-width">
           <label for="message">Message<span class="star">*</span></label>
-          <textarea name="message" id="message"></textarea>
-                <span class="error-label">This field is required</span>
+          <textarea name="message" id="message" ></textarea>
+                <span class="error-label"></span>
         </div>
       </div>
       <div class="form-row">
        <div>
          <div class="checkbox">
-          <label for="checkbox"><input type="checkbox">&nbsp;&nbsp; I consent to being contacted by the team<span
+          <label for="checkbox"><input type="checkbox" id="check-box">&nbsp;&nbsp; I consent to being contacted by the team<span
               class="star">*</span></label>
-              
-        </div>
+                      </div>
          <span class="error-label">To submit this form. please consent to being contacted</span>
        </div>
-        
-      </div>
+              </div>
       <div class="form-row">
-        <button class="submit-btn"> Submit</button>
+        <button type="submit" class="submit-btn"> Submit</button>
       </div>
     </form>
   </div>
